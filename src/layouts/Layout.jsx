@@ -1,10 +1,11 @@
 import { Outlet } from "react-router";
+import MainNav from "../components/MainNav";
 
 // rfce
 function Layout() {
   return (
     <div>
-      Layout
+      <MainNav />
       <hr />
       <Outlet />
     </div>
