@@ -19,6 +19,18 @@ function RecapUseState() {
   const hdlIecrease2 = () => {
     setNumber2((prev) => ({ num: prev.num + 1 }));
   };
+  const hdlDecrease2 = () => {
+    // code func body
+    setNumber2((prev) => ({ num: prev.num - 1 }));
+  };
+  
+  const hdlMulti = () => {
+    setNumber2((state) => ({ num: state.num * 2 }));
+  };
+  const hdlDivide = () => {
+    // func body
+    setNumber2((state) => ({ num: state.num / 2 }));
+  };
 
   return (
     <div>
@@ -49,6 +61,31 @@ function RecapUseState() {
         rounded-md shadow-md"
       >
         Increase2
+      </button>
+      <button
+        onClick={hdlDecrease2}
+        className="bg-green-500 p-2 
+        hover:scale-105 hover:duration-300 hover:bg-green-700
+        rounded-md shadow-md"
+      >
+        Decrease2
+      </button>
+
+      <button
+        onClick={hdlMulti}
+        className="bg-green-500 p-2 
+        hover:scale-105 hover:duration-300 hover:bg-green-700
+        rounded-md shadow-md"
+      >
+        Multi
+      </button>
+      <button
+        onClick={hdlDivide}
+        className="bg-green-500 p-2 
+        hover:scale-105 hover:duration-300 hover:bg-green-700
+        rounded-md shadow-md"
+      >
+        Divide
       </button>
     </div>
   );
