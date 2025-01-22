@@ -21,7 +21,7 @@ function Product() {
 
       <div className="flex flex-wrap">
         {products?.map((product) => {
-          console.log(product);
+          // console.log(product);
           return <ProductCard key={product.id} product={product} />;
         })}
       </div>

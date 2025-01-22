@@ -1,5 +1,6 @@
 import axios from "axios";
 import { create } from "zustand";
+import { persist } from "zustand/middleware";
 
 const productStore = (set) => ({
   products: [],
@@ -14,9 +15,10 @@ const productStore = (set) => ({
     }
   },
   actionAddToCart: (product) => {
-    console.log(product);
+    // console.log(product);
+    set((state)=>({cart:[...state.cart,product]}))
   },
 });
 
-const useProductStore = create(productStore);
+const useProductStore = create(persist(productStore,{name:'product-store'}));
 export default useProductStore;
