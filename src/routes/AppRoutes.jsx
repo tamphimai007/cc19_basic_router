@@ -11,6 +11,7 @@ import Dashboard from "../pages/admin/Dashboard";
 import Manage from "../pages/admin/Manage";
 import Setting from "../pages/admin/Setting";
 import Recap from "../pages/Recap";
+import RecapUseState from "../pages/RecapUseState";
 function AppRoutes() {
   return (
     <div>
@@ -24,6 +25,7 @@ function AppRoutes() {
           <Route path="register" element={<Register />} />
 
           <Route path="recap" element={<Recap />} />
+          <Route path="recap_state" element={<RecapUseState />} />
         </Route>
 
         {/* Private */}
