@@ -7,6 +7,10 @@ import About from "../pages/About";
 import Contact from "../pages/Contact";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
+import Dashboard from "../pages/admin/Dashboard";
+import Manage from "../pages/admin/Manage";
+import Setting from "../pages/admin/Setting";
+import Recap from "../pages/Recap";
 function AppRoutes() {
   return (
     <div>
@@ -14,17 +18,19 @@ function AppRoutes() {
         {/* Public */}
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="about" element={<About/>} />
+          <Route path="about" element={<About />} />
           <Route path="contact" element={<Contact />} />
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />} />
+
+          <Route path="recap" element={<Recap />} />
         </Route>
 
         {/* Private */}
         <Route path="admin" element={<Layout />}>
-          <Route index element={<h1>Dashboard page</h1>} />
-          <Route path="manage" element={<h1>Manage page</h1>} />
-          <Route path="setting" element={<h1>Setting page</h1>} />
+          <Route index element={<Dashboard />} />
+          <Route path="manage" element={<Manage />} />
+          <Route path="setting" element={<Setting />} />
         </Route>
       </Routes>
     </div>

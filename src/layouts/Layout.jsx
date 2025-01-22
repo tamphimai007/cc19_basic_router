@@ -1,5 +1,6 @@
 import { Outlet } from "react-router";
 import MainNav from "../components/MainNav";
+import About from "../pages/About";
 
 // rfce
 function Layout() {
