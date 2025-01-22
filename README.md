@@ -78,3 +78,9 @@ npm install zustand
 ```bash
 npm install axios
 ```
+
+## Use Lucide Icon
+https://lucide.dev/guide/installation
+```bash
+npm install lucide-react
+```
