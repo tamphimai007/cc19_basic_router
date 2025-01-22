@@ -13,6 +13,7 @@ import Setting from "../pages/admin/Setting";
 import Recap from "../pages/Recap";
 import RecapUseState from "../pages/RecapUseState";
 import EasyZustand from "../pages/EasyZustand";
+import Product from "../pages/Product";
 function AppRoutes() {
   return (
     <div>
@@ -28,6 +29,7 @@ function AppRoutes() {
           <Route path="recap" element={<Recap />} />
           <Route path="recap_state" element={<RecapUseState />} />
           <Route path="zustand" element={<EasyZustand />} />
+          <Route path="product" element={<Product/>}/>
         </Route>
 
         {/* Private */}

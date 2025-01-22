@@ -11,9 +11,10 @@ function MainNav() {
         <Link to="/">Home</Link>
         <Link to="/about">About</Link>
         <Link to="/contact">Contact</Link>
-        <Link to="/recap">Recap</Link>
+        {/* <Link to="/recap">Recap</Link>
         <Link to="/recap_state">Recap_useState</Link>
-        <Link to="/zustand">zustand</Link>
+        <Link to="/zustand">zustand</Link> */}
+        <Link to="/product">Product</Link>
       </div>
 
       <div className="flex gap-4">
