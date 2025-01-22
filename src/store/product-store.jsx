@@ -3,7 +3,7 @@ import { create } from "zustand";
 
 const productStore = (set) => ({
   products: [],
-  cart:[],
+  cart: [],
   actionGetData: async () => {
     try {
       const resp = await axios.get("https://dummyjson.com/products");
@@ -12,6 +12,9 @@ const productStore = (set) => ({
     } catch (error) {
       console.log(error.message);
     }
+  },
+  actionAddToCart: (product) => {
+    console.log(product);
   },
 });
 
