@@ -1,3 +1,5 @@
+import { create } from "zustand";
+
 // rfce
 function EasyZustand() {
   // javascript
@@ -5,6 +7,10 @@ function EasyZustand() {
  const tamStore = ()=>({
     firstName : 'phongphat'
  })
+
+ const useTamStore = create()
+
+
  // Step 2 Use Store
 
   return <div>EasyZustand</div>;

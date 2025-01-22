@@ -65,3 +65,10 @@ function AppRoutes() {
 export default AppRoutes;
 
 ```
+
+
+
+## Step 4 Global state with Zustand
+```bash
+npm install zustand
+```
