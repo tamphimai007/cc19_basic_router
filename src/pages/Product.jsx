@@ -6,11 +6,11 @@ function Product() {
   // Javascript
   const products = useProductStore((state) => state.products);
   const actionGetData = useProductStore((state) => state.actionGetData);
-  
-    useEffect(()=>{
-        // code body
-        actionGetData()
-    },[])
+
+  useEffect(() => {
+    // code body
+    actionGetData();
+  }, []);
 
   return (
     <div>
@@ -19,12 +19,12 @@ function Product() {
       </button> */}
       {/* <hr /> */}
 
-      {
-        products?.map((product)=>{
-            console.log(product)
-            return <ProductCard key={product.id} product={product} />
-        })
-      }
+      <div className="flex flex-wrap">
+        {products?.map((product) => {
+          console.log(product);
+          return <ProductCard key={product.id} product={product} />;
+        })}
+      </div>
     </div>
   );
 }
