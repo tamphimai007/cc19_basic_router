@@ -1,8 +1,9 @@
 // rfce
-import { ShoppingCart } from "lucide-react";
+import { ShoppingCart, Trash2 } from "lucide-react";
 import useProductStore from "../store/product-store";
 function ProductCard({ product }) {
   const actionAddToCart = useProductStore((state) => state.actionAddToCart);
+  const actionRemoveProduct =useProductStore((state)=>state.actionRemoveProduct)
   return (
     <div className="bg-slate-100 m-2 p-2 rounded-md shadow-md">
       <img
@@ -13,10 +14,17 @@ function ProductCard({ product }) {
       <p className="text-sm">{product.description.slice(0, 30)}</p>
       <div className="flex justify-between">
         <p className="text-sm">{product.price}</p>
-        <ShoppingCart
-        className="hover:cursor-pointer"
-        onClick={()=>actionAddToCart(product)}
-        color="red" />
+
+        <div className="flex gap-2">
+          <button onClick={()=>actionRemoveProduct(product.id)}>
+            <Trash2  color="red"/>
+          </button>
+          <ShoppingCart
+            className="hover:cursor-pointer"
+            onClick={() => actionAddToCart(product)}
+            color="blue"
+          />
+        </div>
       </div>
     </div>
   );

@@ -18,12 +18,18 @@ const productStore = (set) => ({
     // console.log(product);
     set((state) => ({ cart: [...state.cart, product] }));
   },
+  actionRemoveProduct:(id)=>{
+    set((state)=>({cart: state.cart.filter((item)=>item.id !== id)}))
+  },
   actionClear: () => {
     set({ cart: [] });
   },
 });
-
-const useProductStore = create(
-  persist(productStore, { name: "product-store" })
-);
+const persistStore = {
+  name: "product-store",
+  partialize:(state)=>({
+    cart: state.cart,
+  })
+};
+const useProductStore = create(persist(productStore, persistStore));
 export default useProductStore;
