@@ -15,7 +15,15 @@ const tamStore = (set) => ({
     set((state) => ({ number: state.number + 1 }));
   },
   actionDecrease: () => {
-    set((state) => ({ number: state.number - 1 }));
+    // code body
+    set((state) => ({ number: Math.max(0, state.number - 1) }));
+  },
+  actionMulti: () => {
+    set((state) => ({ number: state.number * 2 }));
+  },
+  actionDivide: (newValue) => {
+    console.log(newValue);
+    set((state) => ({ number: state.number / 2 }));
   },
 });
 const useTamStore = create(tamStore);

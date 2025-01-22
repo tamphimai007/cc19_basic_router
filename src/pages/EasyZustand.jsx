@@ -12,6 +12,8 @@ function EasyZustand() {
   const number = useTamStore((state) => state.number);
   const actionIncrease = useTamStore((state) => state.actionIncrease);
   const actionDecrease = useTamStore((state) => state.actionDecrease);
+  const actionMulti = useTamStore((state) => state.actionMulti);
+  const actionDivide = useTamStore((state) => state.actionDivide);
   console.log(number);
 
   const hdlClick = () => {
@@ -25,9 +27,17 @@ function EasyZustand() {
       <button onClick={actionIncrease} className="bg-green-400">
         Increase
       </button>
-      <br/>
+      <br />
       <button onClick={hdlClick} className="bg-green-400">
         Decrease
+      </button>
+      <br />
+      <button onClick={actionMulti} className="bg-green-400">
+        Multi
+      </button>
+      <br />
+      <button onClick={() => actionDivide("tam")} className="bg-green-400">
+        Divide
       </button>
     </div>
   );
