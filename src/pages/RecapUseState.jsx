@@ -3,7 +3,7 @@ import { useState } from "react"
 // rfce
 function RecapUseState() {
   // Javascript
-  const num = 5
+  const num = 6
   const [number,setNumber] = useState(4)
   console.log(number)
 
