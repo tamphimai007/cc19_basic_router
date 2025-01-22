@@ -1,17 +1,14 @@
-import { create } from "zustand";
+import useTamStore from "../store/tamStore";
 
 // rfce
 function EasyZustand() {
   // javascript
- // Step 1 Create Store
- const tamStore = ()=>({
-    firstName : 'phongphat'
- })
-
- const useTamStore = create()
 
 
  // Step 2 Use Store
+ const firstName = useTamStore((state)=>state.firstName)
+ const address = useTamStore((state)=>state.address)
+ console.log(address.street)
 
   return <div>EasyZustand</div>;
 }
